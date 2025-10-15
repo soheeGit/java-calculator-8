@@ -6,6 +6,20 @@ public class StringCalculator {
             return 0;
         }
 
-        return;
+        String delimiter = "[,:]";
+
+        return sum(input, delimiter);
+    }
+
+    private static int sum(String numbers, String delimiter) {
+        String[] tokens = numbers.split(delimiter);
+
+        int sum = 0;
+        for (String token : tokens) {
+            int number = Integer.parseInt(token);
+            sum += number;
+        }
+
+        return sum;
     }
 }
