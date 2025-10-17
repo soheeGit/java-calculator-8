@@ -17,10 +17,10 @@
 - [x] 커스텀 구분자로 문자열 분리
 
 ## 4. 숫자 변환 및 검증 기능
-- [ ] 분리된 문자열을 정수로 변환
-- [ ] 숫자가 아닌 값 입력 시 `IllegalArgumentException` 발생
-- [ ] 음수 입력 시 `IllegalArgumentException` 발생
-- [ ] 양수만 허용하는 검증 로직 구현
+- [x] 분리된 문자열을 정수로 변환
+- [x] 숫자가 아닌 값 입력 시 `IllegalArgumentException` 발생
+- [x] 음수 입력 시 `IllegalArgumentException` 발생
+- [x] 양수만 허용하는 검증 로직 구현
 
 ## 5. 덧셈 계산 기능
 - [x] 변환된 숫자들의 합계 계산

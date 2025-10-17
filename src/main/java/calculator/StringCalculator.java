@@ -28,10 +28,22 @@ public class StringCalculator {
 
         int sum = 0;
         for (String token : tokens) {
-            int number = Integer.parseInt(token);
+            int number = parseAndValidate(token);
             sum += number;
         }
 
         return sum;
+    }
+
+    private static int parseAndValidate(String token) {
+        try {
+            int number = Integer.parseInt(token);
+            if (number < 0) {
+                throw new IllegalArgumentException("음수는 입력할 수 없습니다.");
+            }
+            return number;
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("숫자가 아닌 값이 포함되어 있습니다.");
+        }
     }
 }
