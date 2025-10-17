@@ -14,7 +14,17 @@ public class StringCalculator {
 
         if(input.startsWith(CUSTOM_DELIMITER_PREFIX)) {
             int newlineIndex = input.indexOf(CUSTOM_DELIMITER_SUFFIX);
+
+            if (newlineIndex == -1) {
+                throw new IllegalArgumentException("커스텀 구분자 형식이 올바르지 않습니다.");
+            }
+
             String customDelimiter = input.substring(2, newlineIndex);
+
+            if (customDelimiter.isEmpty()) {
+                throw new IllegalArgumentException("커스텀 구분자는 비어있을 수 없습니다.");
+            }
+
             numbers = input.substring(newlineIndex + CUSTOM_DELIMITER_SUFFIX.length());
 
             delimiter = delimiter.substring(0, delimiter.length() - 1) + customDelimiter + "]";

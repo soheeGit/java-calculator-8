@@ -31,6 +31,6 @@
 - [x] "결과 : {결과값}" 형식으로 결과 출력
 
 ## 7. 예외 처리 및 애플리케이션 흐름
-- [ ] `IllegalArgumentException` 발생 시 처리
-- [ ] 예외 발생 시 애플리케이션 종료
-- [ ] `Application` 클래스의 `main` 메서드에서 전체 흐름 연결
+- [x] `IllegalArgumentException` 발생 시 처리
+- [x] 예외 발생 시 애플리케이션 종료
+- [x] `Application` 클래스의 `main` 메서드에서 전체 흐름 연결
