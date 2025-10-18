@@ -24,6 +24,30 @@ class ApplicationTest extends NsTest {
         );
     }
 
+    @Test
+    void 정규식_특수문자_구분자() {
+        assertSimpleTest(() -> {
+            run("//[\\n1[2[3");
+            assertThat(output()).contains("결과 : 6");
+        });
+    }
+
+    @Test
+    void 별표_구분자() {
+        assertSimpleTest(() -> {
+            run("//*\\n1*2*3");
+            assertThat(output()).contains("결과 : 6");
+        });
+    }
+
+    @Test
+    void 점_구분자() {
+        assertSimpleTest(() -> {
+            run("//.\\n1.2.3");
+            assertThat(output()).contains("결과 : 6");
+        });
+    }
+
     @Override
     public void runMain() {
         Application.main(new String[]{});
