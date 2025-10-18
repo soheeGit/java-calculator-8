@@ -28,8 +28,7 @@ public class StringCalculator {
             }
 
             numbers = input.substring(newlineIndex + CUSTOM_DELIMITER_SUFFIX.length());
-
-            //delimiter = delimiter.substring(0, delimiter.length() - 1) + customDelimiter + "]";
+            
             delimiter = delimiter.substring(0, delimiter.length() - 1) + Pattern.quote(customDelimiter) + "]";
         }
 
